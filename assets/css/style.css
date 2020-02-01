@@ -8,7 +8,7 @@ body {
 
 .my-game {
     margin-top: 20px;
-    border: solid 5px #fff;
+    border: solid 2px #fff;
     background-color: #000;
     border-radius: 0.25rem;
     }
@@ -26,6 +26,22 @@ body {
 .card-img {
     visibility: hidden;
     object-fit: cover;
+}
+
+
+
+/* quotes generator */
+
+.quotes-container {
+    background-color: #fff;
+}
+
+.quotes-display {
+    height: 200px;
+    width: 400px;
+    margin-top: 50px;
+    background-color: blue;
+    border-radius: 0.25rem;
 }
 
 /* media queries */

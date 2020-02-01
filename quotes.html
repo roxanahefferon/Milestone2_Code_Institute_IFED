@@ -43,37 +43,30 @@
 	</nav>
 </div>
 
-    <!-- sorting hat section -->
+    <!-- quotes section -->
 
-<div class="container-fluid">
+<div class="container-fluid quotes-container">
 <div class="row no-gutters">
 <div class="col-12 text-center">
-<H1>The Sorting Hat</H1>
-<img src="./assets/images/hat-icon.png" alt="sorting hat image" width="150px" height="150px">
+<H1>Quote Generator</H1>
+
+
+<button class="btn btn-default" id="getQuote" type="submit"><i class="fa fa-bolt fa-7x"></i></button>
 </div>
 </div>
 </div>
 
 
-<div class="container text-center">
-<button onclick="typeWriter()">Ta Da!</button>
-
-<p id="demo"></p>
+<div class="container-fluid quotes-display">
+<div class="row no-gutters">
+<div class="col-12">
+</div></div></div>
 </div>
 
 <script>
-var i = 0;
-var txt = 'No good sittin’ worryin’ abou’ it. What’s comin’ will come, an’ we’ll meet it when it does. – Harry Potter and the Goblet of Fire';
 
-var speed = 50;
 
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
+
 </script>
  
 
