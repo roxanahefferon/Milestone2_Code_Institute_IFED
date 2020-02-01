@@ -36,10 +36,11 @@ body {
     background-color: #fff;
 }
 
-.quotes-display {
+#quoteDisplay {
     height: 200px;
     width: 400px;
     margin-top: 50px;
+    justify-content: center;
     background-color: blue;
     border-radius: 0.25rem;
 }
