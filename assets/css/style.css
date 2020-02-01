@@ -1,0 +1,48 @@
+body {
+    background-color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+/* memory game */
+
+.my-game {
+    margin-top: 20px;
+    border: solid 5px #fff;
+    background-color: #000;
+    border-radius: 0.25rem;
+    }
+
+.card {
+    height: 50px;
+    width: 50px;
+    background-image: url('/assets/images/cardBackground.png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    margin: 7px;
+}
+
+.card-img {
+    visibility: hidden;
+    object-fit: cover;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+.card {
+    height: 110px;
+    width: 110px;
+}
+
+.my-game {
+    width: 550px;
+    height: 550px;
+}
+
+.navbar-brand img{
+    width: 75px;
+    height: 75px;
+}
+}
