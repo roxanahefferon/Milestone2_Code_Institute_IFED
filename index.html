@@ -154,22 +154,18 @@
 
 <script>
 
-// 1 - target all elements with class name "card" and store them in variable
-let cardElements = document.getElementByClassName("card");
+let cardElements = document.getElementByClassName("card"); // 1 - target all elements with class name "card" and store them in variable
 
-// 2 - create an array and assign the values of cardElements (*used spread operator)
-let cardElementsArray = [... cardElements];
+let cardElementsArray = [... cardElements]; // 2 - create an array and assign the values of cardElements (*used spread operator)
 
 // 3 - iterate thru array and add event listener on mouse click
 for (let i = 0; i < cardElementsArray.length; i++) {
     cardElementsArray[i].addEventListener("click", displayCard); /*function line 175*/
 }
 
-// 4 - target all elements with class name "card-img" and store them in variable
-let imageElements = document.getElementByClassName("card-img");
+let imageElements = document.getElementByClassName("card-img"); // 4 - target all elements with class name "card-img" and store them in variable
 
-// 5 - create an array and assign the values of imageElement
-let imageElementsArray = [... imageElements];
+let imageElementsArray = [... imageElements]; // 5 - create an array and assign the values of imageElement
 
 // 6 
 function displayCard() {
@@ -180,11 +176,9 @@ function displayCard() {
     cardOpen(this); /*function line 184*/
 }
 
-// 7 - create an empty array where the cards opened will be pushed
-let openedCards = [];
+let openedCards = []; // 7 - create an empty array where the cards opened will be pushed
 
-// 8 - create an empty array where to push the matched cards
-let matchedCards = [];
+let matchedCards = []; // 8 - create an empty array where to push the matched cards
 
 // 9 
 
@@ -193,7 +187,7 @@ let moves = document.getElementById("moveCounter");
 function cardOpen(card) {
 openedCards.push(card);
 let lenOpenCards = openedCards.length;
-if(length === 2) {
+if(lenOpenCards === 2) {
     moveCounter(); /* function line */
     if(openCards[0].type === openCards[1].type) {
         matched();

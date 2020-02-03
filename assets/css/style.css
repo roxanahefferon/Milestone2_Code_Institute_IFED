@@ -28,6 +28,10 @@ body {
     object-fit: cover;
 }
 
+.show-img {
+    visibility: visible;
+    animation: animateShowImage 0.4s linear alternate;
+}
 
 
 /* quotes generator */
