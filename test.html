@@ -11,115 +11,42 @@
 <body>
 
 <div id="memory_game">
-	<div class="card card_1 data-image=harryyellow">
-				<img src="./assets/images/hpClipArt1.png" alt="icon of harry potter with yellow mark" class="card_front">
-                <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-						</div>
-			</div>
+
+<div id="board">
+
+	
 
 		
-				<div class="card card_2 data-image=hogwarts">
-					<img src="./assets/images/hpClipArt2.png" alt="icon of hogwarts crest" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-						</div>
-				
 
-		
-				<div class="card card_3 data-image=gryffindor">
-					<img src="./assets/images/hpClipArt3.png" alt="icon of gryffindor crest" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-						</div>
-				
-
-		
-				<div class="card card_4 data-image=harrywand">
-					<img src="./assets/images/hpClipArt4.png" alt="icon of harry potter with wand" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-						</div>
-				
-
-		
-				<div class="card card_5 data-image=harmione">
-					<img src="./assets/images/hpClipArt5.png" alt="icon of harmione with wand" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
-
-		
-				<div class="card card_6 data-image=owl">
-					<img src="./assets/images/hpClipArt6.png" alt="icon of owl post" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
-
-		
-				<div class="card card_7 data-image=harryblack">
-					<img src="./assets/images/hpClipArt7.png" alt="icon of harry potter with black mark" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
-
-		
-				<div class="card card_8 data-image=hogwartsexpress">
-					<img src="./assets/images/hpClipArt8.png" alt="icon of hogwarts express" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
 			
 
-		
-				<div class="card card_1 data-image=harryyellow">
-					<img src="./assets/images/hpClipArt8.png" alt="icon of harry potter with yellow mark" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
 				
 
-		
-				<div class="card card_2 data-image=hogwarts">
-					<img src="./assets/images/hpClipArt7.png" alt="icon of hogwarts crest" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
+					
 
-		
-				<div class="card card_3 data-image=gryffindor">
-					<img src="./assets/images/hpClipArt6.png" alt="icon of gryffindor crest" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
+						
 
-		
-				<div class="card card_4 data-image=harrywand">
-					<img src="./assets/images/hpClipArt5.png" alt="icon of harry potter with wand" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
+							
 
-		
-				<div class="card card_5 data-image=harmione">
-					<img src="./assets/images/hpClipArt4.png" alt="icon of harmione with wand" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
+								
 
-		
-				<div class="card card_6 data-image=owl">
-					<img src="./assets/images/hpClipArt3.png" alt="icon of owl post" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
+									
 
-		
-				<div class="card card_7 data-image=harryblack">
-					<img src="./assets/images/hpClipArt2.png" alt="icon of harry potter with black mark" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
-				
+										
 
-		
-				<div class="card card_8 data-image=hogwartsexpress">
-					<img src="./assets/images/hpClipArt1.png" alt="icon of hogwarts express" class="card_front">
-                    <img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-                        </div>
+											
+
+												
+
+													
+
+														
+
+															
+
+																
+
+    
 				
 		<div class="container text-center">
 			<span class="move-counter" id="moveCounter"></span>
@@ -127,12 +54,60 @@
 			<button class="restart-btn" id="restartBtn" onClick="startGame()" aria-label="restart game">↻</button>
 
 		</div>
-	</div>
 </div>
 
+<footer>
+<div class="copy"> Roxana Hefferon 2020</div>
+</footer>
+
+<script src="js/main.js">
+
+let cardElements = document.getElementByClassName("card"); // 1 - target all elements with class name "card" and store them in variable
+
+let cardElementsArray = [... cardElements]; // 2 - create an array and assign the values of cardElements (*used spread operator)
+
+// 3 - iterate thru array and add event listener on mouse click
+for (let i = 0; i < cardElementsArray.length; i++) {
+    cardElementsArray[i].addEventListener("click", displayCard); /*function line 175*/
+}
+
+let imageElements = document.getElementByClassName("card-img"); // 4 - target all elements with class name "card-img" and store them in variable
+
+let imageElementsArray = [... imageElements]; // 5 - create an array and assign the values of imageElement
+
+// 6 
+function displayCard() {
+    this.children[0].classList.toggle("show-img");
+    this.classList.toggle("open");
+    this.classList.toggle("show");
+    this.classList.toggle("disabled");
+    cardOpen(this); /*function line 184*/
+}
+
+let openedCards = []; // 7 - create an empty array where the cards opened will be pushed
+
+let matchedCards = []; // 8 - create an empty array where to push the matched cards
+
+// 9 
+
+let moves = document.getElementById("moveCounter");
+
+function cardOpen(card) {
+openedCards.push(card);
+let lenOpenCards = openedCards.length;
+if(lenOpenCards === 2) {
+    moveCounter(); /* function line */
+    if(openCards[0].type === openCards[1].type) {
+        matched();
+    } else {
+        unmatched();
+    }
+    }
+}
 
 
 
+</script>
     
 </body>
 </html>
