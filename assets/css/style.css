@@ -17,7 +17,51 @@ body {
     color: #e3a000;
 }
 
+.moves {
+    background-color: #033807;
+}
+
+.timer {
+    background-color: #9c1203;
+}
+
+.tip {
+    background-color: #00165e;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tool-tip button {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1.6em;
+    font-weight: 900;
+}
+
+.tool-tip .tool-tip-text {
+    visibility: hidden;
+    width: 5.5em;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    top: 2.1em;
+    right: 0;
+    z-index: 1;
+    border-radius: 0.3em;
+}
+
+.tool-tip:hover .tool-tip-text{
+    visibility: visible;
+}
+
 #board {
+    max-width: 85%;
     margin-top: 20px;
     border: solid 2px #fff;
     background-color: #000;
@@ -110,5 +154,9 @@ btn:focus {
 .navbar-brand img{
     width: 75px;
     height: 75px;
+}
+
+#board {
+    max-width: 50%;
 }
 }
