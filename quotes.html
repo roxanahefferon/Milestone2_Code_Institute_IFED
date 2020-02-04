@@ -48,32 +48,24 @@
 <div class="container-fluid quotes-container">
 <div class="row no-gutters">
 <div class="col-12 text-center">
-<H1>Aparecium</H1>
 
-<button class="btn btn-default" onclick="aparecium()"><i class="fa fa-bolt fa-7x"></i></button>
-
+<button class="btn quoteBtn" id="magic" onclick="aparecium()"><i class="fa fa-bolt fa-7x"></i></button>
+<h1>Aparecium</h1>
 </div></div></div>
+
 <div class="container-fluid">
 <div class="row no-gutters">
 <div class="col-12">
-<div id="quoteDisplay">...</div>
-</div></div></div>
-
-<script>
-
-let quotes = ['"Mr. and Mrs. Dursley of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much. ― Harry Potter and the Sorcerer\'s Stone"',
-  ''"I hope you\'re pleased with yourselves. We could all have been killed — or worse, expelled. Now if you don't mind, I'm going to bed. ― Hermione Granger, Harry Potter and the Sorcerer\'s Stone"',
-  ''"It does not do well to dwell on dreams and forget to live. ― Albus Dumbledore, Harry Potter and the Sorcerer's Stone"',
-  ''"To the well-organized mind, death is but the next great adventure. ― Albus Dumbledore, Harry Potter and the Sorcerer's Stone"',]
-
-function aparecium() {
-  let randomNumber = Math.floor(Math.random()*(quotes.length));
-  document.getElementById("quoteDisplay").innerHTML = quotes[randomNumber];
-}
+<div id= "quote-center"> 
+  <p id= "quote">
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore fugiat vitae numquam dolores! Libero, labore?</p>
+</div>
+</div>
+</div>
+</div>
 
 
-
-</script>
+<script src="./js/script.js"></script>
  
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

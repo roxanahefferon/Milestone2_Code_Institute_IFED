@@ -1,11 +1,12 @@
-* {
+/** {
     margin: 0;
     padding: 0;
-}
+}*/
 
 body {
     background-color: #000;
     font-family: 'Josefin Slab', serif;
+    color: #fff;
 }
 
 /* memory game */
@@ -13,7 +14,7 @@ body {
 #heading h1{
     text-align: center;
     font-family: 'Fontdiner Swanky', cursive, sans-serif;
-    background-color: gold;
+    color: #e3a000;
 }
 
 #board {
@@ -50,23 +51,48 @@ body {
     transform: rotateY(180deg);
 }
 
+/* sorting hat */
 
+#typeWBtn {
+    background-color: #2d004d;
+    color: #fff;
+    border-radius: 0.25rem;
+}
 
 /* quotes generator */
 
-/*
-.quotes-container {
-    background-color: #fff;
+#quote-center {
+  border-radius: 4px;
+  position:relative;
+  margin:50px auto auto auto;
+  width:450px;
+  padding:40px 50px;
 }
 
-#quoteDisplay {
-    height: 200px;
-    width: 400px;
-    margin-top: 50px;
-    justify-content: center;
-    background-color: blue;
-    border-radius: 0.25rem;
+#quote {
+  color: #fff;
+  text-align: center;
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
 }
+
+btn:focus {
+  outline:transparent;
+}
+
+.quoteBtn {
+  top: 20px;
+  color: #fff;
+  border: none;
+  opacity: 1;
+}
+
+.quoteBtn:hover {
+	opacity: .5;
+  	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
 
 /* media queries */
 

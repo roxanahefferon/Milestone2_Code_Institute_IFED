@@ -10,9 +10,48 @@
 </head>
 <body>
 
-<div id="memory_game">
+<div class="container-fluid">
+<div class="row no-gutters">
+<div class="col-12 text-center">
+<H1>The Sorting Hat</H1>
+<img src="./assets/images/hat-icon.png" alt="sorting hat image" width="150px" height="150px">
+</div>
+</div>
+</div>
 
-<div id="board">
+
+<div class="container text-center">
+<button onclick="typeWriter()">Ta Da!</button>
+
+<p id="demo"></p>
+</div>
+
+<script>
+var i = 0;
+var txt = 'No good sittin’ worryin’ abou’ it. What’s comin’ will come, an’ we’ll meet it when it does. – Harry Potter and the Goblet of Fire';
+
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+ 
+
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+
 
 	
 
@@ -48,77 +87,13 @@
 
     
 				
-		<div class="container text-center">
-			<span class="move-counter" id="moveCounter"></span>
-			<span class="timer" id="timer">0 mins 0 secs</span>
-			<button class="restart-btn" id="restartBtn" onClick="startGame()" aria-label="restart game">↻</button>
 
-		</div>
-</div>
 
-<footer>
-<div class="copy"> Roxana Hefferon 2020</div>
-</footer>
-
-<script src="js/main.js">
-
-let cardElements = document.getElementByClassName("card"); // 1 - target all elements with class name "card" and store them in variable
-
-let cardElementsArray = [... cardElements]; // 2 - create an array and assign the values of cardElements (*used spread operator)
-
-// 3 - iterate thru array and add event listener on mouse click
-for (let i = 0; i < cardElementsArray.length; i++) {
-    cardElementsArray[i].addEventListener("click", displayCard); /*function line 175*/
-}
-
-let imageElements = document.getElementByClassName("card-img"); // 4 - target all elements with class name "card-img" and store them in variable
-
-let imageElementsArray = [... imageElements]; // 5 - create an array and assign the values of imageElement
-
-// 6 
-function displayCard() {
-    this.children[0].classList.toggle("show-img");
-    this.classList.toggle("open");
-    this.classList.toggle("show");
-    this.classList.toggle("disabled");
-    cardOpen(this); /*function line 184*/
-}
-
-let openedCards = []; // 7 - create an empty array where the cards opened will be pushed
-
-let matchedCards = []; // 8 - create an empty array where to push the matched cards
-
-// 9 
-
-let moves = document.getElementById("moveCounter");
-
-function cardOpen(card) {
-openedCards.push(card);
-let lenOpenCards = openedCards.length;
-if(lenOpenCards === 2) {
-    moveCounter(); /* function line */
-    if(openCards[0].type === openCards[1].type) {
-        matched();
-    } else {
-        unmatched();
-    }
-    }
-}
+<script src="js/main.js"></script>
 
 
 
-</script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
 
-    
 </body>
 </html>
