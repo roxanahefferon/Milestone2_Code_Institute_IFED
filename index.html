@@ -67,23 +67,11 @@ Lorem ipsum dolor sit amet.
 <div class="col-md-4 timer">
 Lorem ipsum dolor sit amet.
 </div>
-<div class="col-md-4 tip">
-<span class="tool-tip">
-            <button onClick="openHelpModal()">
-            <img src="./assets/images/hedwigOwl.svg" alt="image of hedwig owl" width="40" height="40">
-            </button>
-            <span class="tool-tip-text">Click for rules</span>
-        </span>
-</div>
 
+<div class="col-md-4 rules">
+            <button id="myBtn">&#9889How to play</button>
+            </div>
 
-<div class="container-fluid">
-	<div class="row no-gutters">
-		<div class="col-10 offset-1 text-center">
-
-        <p>Lorem ipsum dolor, maiores dolorum?
-		
-        </div>
 
 <div class="container-fluid">
 	<div class="row no-gutters">
@@ -216,10 +204,32 @@ Lorem ipsum dolor sit amet.
 
 </div> <!-- closing row -->
 </div> <!-- closing board -->
+
+<!-- Modal to display Game Instructions -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+        <p>How to play:</p>
+            <ul>
+                <li>Click on a card to reveal it.</li>
+                <li>Click on a second card to reveal it.</li>
+            <ul>
+                <li>1. If the two cards match, they will stay face up.</li>
+                <li>2. If there is no match, the cards will turn back again.</li>
+            </ul>
+                </li>
+                <li>The game ends when you have matched all 8 pairs of cards.</li>
+                </ul>
+  </div>
+
+</div>
 </div> <!-- closing memory_game-->
 
 
-<!-- modal  -->
 
 <footer>
      <div class="container">
