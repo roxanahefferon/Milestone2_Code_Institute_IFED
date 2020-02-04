@@ -17,7 +17,7 @@ body {
     background-color: gold;
 }
 
-.my-game {
+#board {
     margin-top: 20px;
     border: solid 2px #fff;
     background-color: #000;
@@ -27,22 +27,30 @@ body {
 .card {
     height: 50px;
     width: 50px;
-    background-image: url('/assets/images/cardBackground.png');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
     margin: 7px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
-.card-img {
-    visibility: hidden;
-    object-fit: cover;
+.card.flip {
+    transform: rotateY(180deg);
 }
 
-.show-img {
-    visibility: visible;
-    animation: animateShowImage 0.4s linear alternate;
+.card_front,
+.card_back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
+
+.card_front {
+    transform: rotateY(180deg);
+}
+
 
 
 /* quotes generator */
