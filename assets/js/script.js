@@ -1,23 +1,26 @@
-// Get the modal
+$(document).ready(function() {
+    
+    $("h1").css("backgroundColor", "red");
+    $("h1").css("text-decoration", "underline");
+  
+});
+
+
+
+// modal
+
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -33,37 +36,29 @@ function countDown(i, callback) {
     }, 1000);
 }
 
+
+
+
+
+
+
+
 // sorting hat
 
-var i = 0;
+var x = 0;
 var txt = 'No good sittin’ worryin’ abou’ it. What’s comin’ will come, an’ we’ll meet it when it does. – Harry Potter and the Goblet of Fire';
 
 var speed = 50;
 
 function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("result").innerHTML += txt.charAt(i);
-    i++;
+  if (x < txt.length) {
+    document.getElementById("result").innerHTML += txt.charAt(x);
+    x++;
     setTimeout(typeWriter, speed);
   }
 }
 
 // sorting hat questions
-
-function myFunction() {
-  var x = document.createElement("INPUT");
-  var y = document.createElement("INPUT");
-  var z = document.createElement("INPUT");
-  var w = document.createElement("INPUT");
-  x.setAttribute("type", "checkbox");
-  document.body.appendChild(x);
-  y.setAttribute("type", "checkbox");
-  document.body.appendChild(y);
-  z.setAttribute("type", "checkbox");
-  document.body.appendChild(z);
-  w.setAttribute("type", "checkbox");
-  document.body.appendChild(w);
-}
 
 
 function sorting() {

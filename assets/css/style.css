@@ -1,9 +1,6 @@
-/** {
+body {
     margin: 0;
     padding: 0;
-}*/
-
-body {
     background-color: #000;
     font-family: 'Josefin Slab', serif;
     color: #fff;
@@ -17,8 +14,8 @@ body {
     color: #e3a000;
 }
 
-.moves {
-    background-color: #033807;
+.start {
+    background-color: #00165e;
 }
 
 .timer {
@@ -26,14 +23,20 @@ body {
 }
 
 .rules {
+    background-color: #033807;
+}
+
+#startBtn {
     background-color: #00165e;
+    color: #fff;
+    border: none;
 }
 
 /* modal */
 
 #myBtn {
-    background-color: #00165e;
-    float: right;
+    background-color: #033807;
+    float: center;
     color: #fff;
     border: none;
 }
@@ -53,7 +56,7 @@ body {
 /* Modal Content/Box */
 .modal-content {
   background-color: #2d004d;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #fff;
@@ -174,4 +177,50 @@ btn:focus {
 #board {
     max-width: 50%;
 }
+}
+
+@media only screen { 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+#board {
+    max-width: 70%;
+}
+}
+
+
+/* quiz */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.quiz-wrapper {
+    display: flex;
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+    width: 100vw;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-btn {
+    background-color: blue;
+}
+
+.quiz-container {
+    width: 800px;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.quiz-btn {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
 }
