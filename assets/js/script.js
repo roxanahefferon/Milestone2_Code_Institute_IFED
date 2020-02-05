@@ -1,4 +1,4 @@
-const startQuizBtn = document.getElementById('quiz-start-btn');
+/*const startQuizBtn = document.getElementById('quiz-start-btn');
 const quizQuestCont = document.getElementById('quiz-question');
 let suffleQuest, currentQIndex;
 const questionElement = document.getElementById('questions');
@@ -108,104 +108,34 @@ function sorting() {
     
     alert(result);
 }
+*/
 
 // quotes
 
-function aparecium() {
-  var quote = randomQuote(Math.random());
-  document.getElementById("quote").innerHTML = quote[0];
-  document.body.style.backgroundColor = quote[1];
-  document.getElementById("quote-center").style.backgroundColor = quote[2];
-  document.getElementById("quote").style.color = quote[4];
-  document.getElementById("magic").style.color = quote[4];
-  document.getElementById("magic").style.backgroundColor = quote[1];
-  document.getElementById("tumblr").style.color = quote[4];
-  document.getElementById("tumblr").style.backgroundColor = quote[1];
-};
+let quotes = [
+    "It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends. – Harry Potter and the Sorcerer\’s Stone.",
+    "It does not do well to dwell on dreams and forget to live. – Harry Potter and the Sorcerer\’s Stone.",
+    "To the well-organized mind, death is but the next great adventure. – Harry Potter and the Sorcerer\’s Stone.",
+    "Fear of a name only increases fear of the thing itself. – Harry Potter and the Chamber of Secrets.",
+    "It is our choices, Harry, that show what we truly are, far more than our abilities. – Harry Potter and the Chamber of Secrets.",
+    "But you know, happiness can be found even in the darkest of times, if one only remembers to turn on the light. – Harry Potter and the Prisoner of Azkaban.",
+    "Of course it is happening inside your head, Harry, but why on Earth should that mean it\’s not real? – Harry Potter and the Deathly Hallows.",
+    "I am what I am, an\’ I\’m not ashamed. ‘Never be ashamed,’ my ol’ dad used ter say, ‘there’s some who’ll hold it against you, but they’re not worth botherin’ with. – Harry Potter and the Goblet of Fire",
+    "It matters not what someone is born, but what they grow to be. – Harry Potter and the Goblet of Fire",
+    "Things we lose have a way of coming back to us in the end, if not always in the way we expect. – Harry Potter and the Order of the Phoenix",
+    "I think I’ll just go down and have some pudding and wait for it all to turn up — it always does in the end. – Harry Potter and the Order of the Phoenix",
+    "I mean, it’s sort of exciting, isn’t it, breaking the rules? – Harry Potter and the Order of the Phoenix",
+    "We’ve all got both light and dark inside us. What matters is the part we choose to act on. That’s who we really are. – Harry Potter and the Order of the Phoenix",
+    "And now, Harry, let us step out into the night and pursue that flighty temptress, adventure. – Harry Potter and the Half-Blood Prince",
+    "Every human life is worth the same, and worth saving. – Harry Potter and the Deathly Hallows",
+    "Never trust anything that can think for itself if you can’t see where it keeps its brain. – Harry Potter and the Chamber of Secrets",
+    "You sort of start thinking anything’s possible if you’ve got enough nerve. – Harry Potter and the Half-Blood Prince",
+    "Just because you have the emotional range of a teaspoon doesn’t mean we all have. – Harry Potter and the Order of the Phoenix",
+    "Until the very end. – Harry Potter and the Deathly Hallows",
+    "Dark and difficult times lie ahead. Soon we must all face the choice between what is right and what is easy. – Harry Potter and the Goblet of Fire",
+];
 
-document.getElementById("magic").addEventListener("click", function(){
-  aparecium();
-});
-
-var gryffindor = {
-    quotes: ['"It does not do to dwell on dreams and forget to live, remember that." - Albus Dumbledore', 
-    '"If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals." - Sirius Black', 
-    '"I am what I am an’ I’m not ashamed. ‘Never be ashamed,’ my ol’ dad used ter say, ‘there’s some who’ll hold it against you, but they’re not worth bothern’ with." - Rubeus Hagrid', 
-    '"Of course it is happening inside your head, Harry, but why on earth should that mean it is not real?" - Albus Dumbledore',
-    '"After all, to the well-organized mind, death is but the next great adventure." - Albus Dumbledore',
-    '"It is our choices, Harry, that show what we truly are, far more than our abilities." - Albus Dumbledore', 
-             '"The thing about growing up with Fred and George is that you sort of start thinking anything’s possible if you’ve got enough nerve." - Ginny Weasley', '"I don’t go looking for trouble. Trouble usually finds me." - Harry Potter'],
-  color1: "#740001",
-  color2: "#ae0001",
-  color3: "#eeba30",
-  color4: "#d3a625",
-  title: "GRYFFINDOR QUOTE"
-};
-
-var ravenclaw = {
-    quotes: ['"Wit beyond measure is man’s greatest treasure." - Rowena Ravenclaw', 
-             '"Don’t worry. You’re just as sane as I am." - Luna Lovegood', 
-             '"Either must die at the hand of the other for neither can live while the other survives" - Sybill Trelawney', 
-             '"Gilderoy Lockhart, Order of Merlin, Third Class, Honorary Member of the Dark Force Defense League, and five times winner of Witch Weekly’s Most Charming Smile Award. But I don’t talk about that; I didn’t get rid of the Banden Banshee by smiling at him." - Gilderoy Lockhart',
-            '"Curious indeed how these things happen. The wand chooses the wizard, remember… I think we must expect great things from you, Mr. Potter… After all, He-Who-Must-Not-Be-Named did great things, terrible, yes, but great." - Ollivander', 
-            '"There is no good or evil, there is only power, and those too weak to seek it." - Prof. Quirrell'],
-  color1: "#0e1a40",
-  color2: "#222f5b",
-  color3: "#946b2b",
-  color4: "#5d5d5d",
-  title: "RAVENCLAW QUOTE"
-};
-
-var slytherin = {
-    quotes: ['"The mind is not a book, to be opened at will and examined at leisure." - Severus Snape', 
-             '"Greatness inspires envy. Envy engenders spite. Spite spawns lies." - Lord Voldemort', 
-             '"Famous Harry Potter, can’t even go to a bookshop without making the front page." - Draco Malfoy', 
-             '"Always." - Severus Snape',
-            '"Is it love again? Dumbledore’s favorite solution, love, which he claimed conquered death, though love did not stop him falling from the tower and breaking like an old waxwork? Love, which did not prevent me stamping out your Mudblood mother like a cockroach, Potter!" - Lord Voldemort'],
-  color1: "#1a472a",
-  color2: "#2a623d",
-  color3: "#5d5d5d",
-  color4: "#aaaaaa",
-  title: "SLYTHERIN QUOTE",
-};
-
-var hufflepuff = {
-    quotes: ['"Said Hufflepuff, ‘I’ll teach the lot, and treat them just the same." - The Sorting Hat', 
-             '"Ah well… wand still in your jeans? Both buttocks still on? Okay, let’s go." - Nymphadora Tonks', 
-             '"Remember Cedric. Remember, if the time should come when you have to make a choice between what is right, and what is easy, remember what happened to a boy who was good, and kind, and brave, because he strayed across the path of Lord Voldemort. Remember Cedric Diggory." - Albus Dumbledore', 
-             '"In many, many ways, Hufflepuff is my favourite House." - J.K. Rowling'],
-  color1: "#ecb939",
-  color2: "#f0c75e",
-  color3: "#372e29",
-  color4: "#726255",
-  title: "HUFFLEPUFF QUOTE",
-};
-
-
-function randomQuote(number) {
-    console.log(number);
-    
-    if (number >= 0 && number < 0.25) {
-        var numberGryf = Math.floor((Math.random() * 6) + 0);
-        console.log(numberGryf);
-        return [gryffindor.quotes[numberGryf], gryffindor.color1, gryffindor.color2, gryffindor.color3, gryffindor.color4, gryffindor.title];
-        
-    } else if (number >= 0.25 && number < 0.50) {
-        var numberRav = Math.floor((Math.random() * 6) + 0);
-        console.log(numberRav);
-        return [ravenclaw.quotes[numberRav], ravenclaw.color1, ravenclaw.color2, ravenclaw.color3, ravenclaw.color4, ravenclaw.title];
-        
-    } else if (number >= 0.50 && number < 0.75) {
-        var numberSlyth = Math.floor((Math.random() * 5) + 0);
-        console.log(numberSlyth);
-        return [slytherin.quotes[numberSlyth], slytherin.color1, slytherin.color2, slytherin.color3, slytherin.color4, slytherin.title];
-        
-    } else if (number >= 0.75 && number <= 1) {
-        var numberHuff = Math.floor((Math.random() * 4) + 0);
-        console.log(numberHuff);
-        return [hufflepuff.quotes[numberHuff], hufflepuff.color1, hufflepuff.color2, hufflepuff.color3, hufflepuff.color4, hufflepuff.title];
-        
-    }
+function newQuote() {
+    var randomNum = Math.floor(Math.random() * 20);
+    document.getElementById("quoteDisplay").innerHTML=quotes[randomNum];
 }
-
-aparecium();
