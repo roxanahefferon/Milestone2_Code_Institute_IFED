@@ -1,7 +1,7 @@
 const startQuizBtn = document.getElementById('quiz-start-btn');
 const quizQuestCont = document.getElementById('quiz-question');
-const suffleQuest, currentQIndex;
-const questElement = document.getElementById('questions');
+let suffleQuest, currentQIndex;
+const questElement = document.getElementById('question');
 const answElement = document.getElementById('answers');
 
 startQuizBtn.addEventListener('click', startQuiz);
@@ -16,11 +16,10 @@ setNextQ()
 
 function quizNextQuestion(){
 showQuestion(shuffleQuest[currentQIndex])
-
 }
 
-function showQuestion(question){
-
+function showQuestion(questions){
+questElement.innerText = quizQuest.questions;
 }
 
 function quizSelectAnswer(){
@@ -32,13 +31,12 @@ function quizSelectAnswer(){
 
 const quizQuest = [
     {
-        question: 'What spell produces a jet of water from the caster’s wand?'
-// array for answers
+        questions: 'What spell produces a jet of water from the caster’s wand?',
         answers: [
-            {text: 'Aguamenti', correct: true};
-            {text: 'Caterwauling Charm', correct: false};
-            {text: 'Portus', correct: false};
-            {text: 'Scourgify', correct: false};
+            {text: 'Aguamenti', correct: true},
+            {text: 'Caterwauling Charm', correct: false},
+            {text: 'Portus', correct: false},
+            {text: 'Scourgify', correct: false},
 
         ]
     }
