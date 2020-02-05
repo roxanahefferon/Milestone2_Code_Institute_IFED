@@ -1,11 +1,48 @@
-$(document).ready(function() {
-    
-    $("h1").css("backgroundColor", "red");
-    $("h1").css("text-decoration", "underline");
-  
-});
+const startQuizBtn = document.getElementById('quiz-start-btn');
+const quizQuestCont = document.getElementById('quiz-question');
+const suffleQuest, currentQIndex;
+const questElement = document.getElementById('questions');
+const answElement = document.getElementById('answers');
+
+startQuizBtn.addEventListener('click', startQuiz);
+
+function startQuiz(){
+startQuizBtn.classList.add('hide');
+suffleQuest = quizQuest.sort(() => Math.random() - .5)
+currentQIndex = 0;
+quizQuestCont.classList.remove('hide');
+setNextQ()
+}
+
+function quizNextQuestion(){
+showQuestion(shuffleQuest[currentQIndex])
+
+}
+
+function showQuestion(question){
+
+}
+
+function quizSelectAnswer(){
 
 
+}
+
+// array for questions (objects)
+
+const quizQuest = [
+    {
+        question: 'What spell produces a jet of water from the caster’s wand?'
+// array for answers
+        answers: [
+            {text: 'Aguamenti', correct: true};
+            {text: 'Caterwauling Charm', correct: false};
+            {text: 'Portus', correct: false};
+            {text: 'Scourgify', correct: false};
+
+        ]
+    }
+]
 
 // modal
 
