@@ -1,8 +1,8 @@
 const startQuizBtn = document.getElementById('quiz-start-btn');
 const quizQuestCont = document.getElementById('quiz-question');
 let suffleQuest, currentQIndex;
-const questElement = document.getElementById('question');
-const answElement = document.getElementById('answers');
+const questionElement = document.getElementById('questions');
+const answersElement = document.getElementById('answers');
 
 startQuizBtn.addEventListener('click', startQuiz);
 
@@ -19,7 +19,7 @@ showQuestion(shuffleQuest[currentQIndex])
 }
 
 function showQuestion(questions){
-questElement.innerText = quizQuest.questions;
+questionElement.innerText = quizQuest.questions;
 }
 
 function quizSelectAnswer(){
