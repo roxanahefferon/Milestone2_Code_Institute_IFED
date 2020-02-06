@@ -132,11 +132,23 @@ body {
 }
 
 #quoteDisplay {
-  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  color: #000;
   text-align: center;
   font-family: 'Josefin Slab', serif;
   font-size: 20px;
 }
+
+.quotesBox {
+background-color: green;
+margin: 50px;
+border-radius: 0.25rem;
+}
+
 
 btn:focus {
   outline:transparent;
