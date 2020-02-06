@@ -23,6 +23,26 @@ function shuffle(array) {
     return array;
 }
 
+// start game function
+
+function startGame() {
+    let shuffled = shuffle(imagesArray);
+
+    for (i=0; i < shuffled.length; i++) {
+        cardElements[i].innerHTML="";
+        cardElements[i].appendChild(shuffled[i]);
+        cardElements[i].type = `${shuffled[i]}`.alt;
+
+
+
+    }
+
+
+    }
+
+
+
+
 // modal
 
 var modal = document.getElementById("myModal");

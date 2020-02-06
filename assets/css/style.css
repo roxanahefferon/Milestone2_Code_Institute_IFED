@@ -67,6 +67,8 @@ body {
 
 .modal-content {
   background-color: #2d004d;
+  border: none;
+  box-shadow: 0 0 10px 2px;
   font-size: 1.5rem;
   margin: 15% auto; 
   padding: 20px;
@@ -82,9 +84,7 @@ body {
 }
 
 .close:hover,
-.close:focus {
-  font-size: 36px;  
-  color: #9c1203;
+.close:focus {  
   text-decoration: none;
   cursor: pointer;
 }
