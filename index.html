@@ -65,17 +65,20 @@
 <div class="container-fluid">
 <div class="row no-gutters text-center">
 
-<div class="col-md-4 col-sm-12 rules">
-<button id="myBtn"><i class="fas fa-question-circle"> How to play</i></button>
+<div class="col-md-3 col-sm-12 rules">
+<button id="HowToBtn"><i class="fas fa-question-circle"> How to play</i></button>
 </div>
 
-<div class="col-md-4 col-sm-12 start">
-<button onclick="startGame()" id="startBtn"><i class="fas fa-gamepad"></i> Start Playing</button>
+<div class="col-md-3 col-sm-12 start">
+<button id="startBtn" onclick="startGame()"><i class="fas fa-gamepad"></i> Start Playing</button>
 </div>
 
-<div class="col-md-4 col-sm-12 timer">
-    <i class="fas fa-stopwatch"></i><span id="time-left"> Time: 60</span>
-    <span id="moves"> Moves: 0</span>
+<div class="col-md-3 col-sm-12 timer">
+    <span id="time-left"><i class="fas fa-stopwatch"></i> Time: 60</span>
+</div>
+
+<div class="col-md-3 col-sm-12 moves">
+ <span id="moves-count"><i class="fas fa-arrows-alt"></i> Moves: 0</span>
 </div>
 
 
@@ -87,113 +90,97 @@
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="harryyellow">
 				<img src="./assets/images/hpClipArt1.png" alt="icon of harry potter with yellow mark" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-						        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="hogwarts">
 				<img src="./assets/images/hpClipArt2.png" alt="icon of hogwarts crest" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-								</div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="gryffindor">
 				<img src="./assets/images/hpClipArt3.png" alt="icon of gryffindor crest" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-								</div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="harrywand">
 				<img src="./assets/images/hpClipArt4.png" alt="icon of harry potter with wand" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-								</div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="harmione">
 				<img src="./assets/images/hpClipArt5.png" alt="icon of harmione with wand" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="owl">
 				<img src="./assets/images/hpClipArt6.png" alt="icon of owl post" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="harryblack">
 				<img src="./assets/images/hpClipArt7.png" alt="icon of harry potter with black mark" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="hogwartsexpress">
 				<img src="./assets/images/hpClipArt8.png" alt="icon of hogwarts express" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="harryyellow">
 				<img src="./assets/images/hpClipArt8.png" alt="icon of harry potter with yellow mark" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="hogwarts">
 				<img src="./assets/images/hpClipArt7.png" alt="icon of hogwarts crest" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="gryffindor">
 				<img src="./assets/images/hpClipArt6.png" alt="icon of gryffindor crest" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
             </div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="harrywand">
 				<img src="./assets/images/hpClipArt5.png" alt="icon of harry potter with wand" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="harmione">
 				<img src="./assets/images/hpClipArt4.png" alt="icon of harmione with wand" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="owl">
 				<img src="./assets/images/hpClipArt3.png" alt="icon of owl post" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="harryblack">
 				<img src="./assets/images/hpClipArt2.png" alt="icon of harry potter with black mark" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
 			</div>
 
 		<div class="col-3 col-md-3">
 			<div class="card" data-image="hogwartsexpress">
 				<img src="./assets/images/hpClipArt1.png" alt="icon of hogwarts express" class="card_front">
-				<img src="./assets/images/cardBackground.png" alt="icon of deadly hallows" class="card_back">
-		                        </div>
+				</div>
             </div>
 
 </div> <!-- closing row -->
