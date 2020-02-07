@@ -1,56 +1,67 @@
 // declaration of variables
 
 const cards = document.querySelectorAll('.card');
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 
 function flipCard() {
-  this.classList.toggle('flip');
-}
+  if (lockBoard) return;
+  this.classList.add('flip');
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+   return;
+   }
+
+   secondCard = this;
+   hasFlippedCard = false;
+
+   checkForMatch();
+ }
+
+ function checkForMatch() {
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+    disableCards();
+    return;
+   }
+
+   unflipCards();
+ }
+
+ function disableCards() {
+   firstCard.removeEventListener('click', flipCard);
+   secondCard.removeEventListener('click', flipCard);
+ }
+
+ function unflipCards() {
+
+    lockBoard = true;
+    setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+    lockBoard = false;
+   }, 1500);
+ }
+
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 
 
-// shuffle array function
-
-function shuffle(array) {
-    let currentIndex = array.length, temporaryValue, randomIndex;
-
-    while (currentIndex !==0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -=1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-    return array;
-}
-
-// start game function
-
-function startGame() {
-    let shuffled = shuffle(imagesArray);
-
-    for (i=0; i < shuffled.length; i++) {
-        cardElements[i].innerHTML="";
-        cardElements[i].appendChild(shuffled[i]);
-        cardElements[i].type = `${shuffled[i]}`.alt;
-
-
-
-    }
-
-
-    }
 
 
 
 
-// modal
+
+// modal declaration of variables 
 
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("HowToBtn");
 var span = document.getElementsByClassName("close")[0];
+
+// functions 
 
 btn.onclick = function() {
   modal.style.display = "block";
