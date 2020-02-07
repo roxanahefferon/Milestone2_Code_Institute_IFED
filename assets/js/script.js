@@ -1,9 +1,12 @@
 // declaration of variables
 
-let cardElements = document.getElementsByClassName("card");
-let cardsArray = [...cardElements];
-let imageElements = document.getElementsByClassName("card-front");
-let imagesArray = [...imageElements];
+const cards = document.querySelectorAll('.card');
+
+function flipCard() {
+  this.classList.toggle('flip');
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 
