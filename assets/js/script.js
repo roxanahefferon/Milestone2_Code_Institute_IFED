@@ -1,6 +1,7 @@
-// declaration of variables
+// memory game
 
 const cards = document.querySelectorAll('.card');
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -8,55 +9,55 @@ let firstCard, secondCard;
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
+
   this.classList.add('flip');
+
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
-   return;
-   }
 
-   secondCard = this;
-
-   checkForMatch();
- }
-
- function checkForMatch() {
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-    disableCards();
     return;
-   }
+  }
 
-   unflipCards();
- }
+  secondCard = this;
+  checkForMatch();
+}
 
- function disableCards() {
-   firstCard.removeEventListener('click', flipCard);
-   secondCard.removeEventListener('click', flipCard);
- }
+function checkForMatch() {
+  let isMatch = firstCard.dataset.picture === secondCard.dataset.picture;
 
- resetBoard();
+  isMatch ? disableCards() : unflipCards();
+}
 
- function unflipCards() {
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
 
-    lockBoard = true;
-    setTimeout(() => {
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
+
     resetBoard();
-   }, 1500);
- }
+  }, 1500);
+}
 
- function resetBoard() {
-   [hasFlippedCard, lockBoard] = [false, false];
-   [firstCard, secondCard] = [null, null];
- }
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
 
- (function shuffle() {
-   cards.forEach(card => {
-     let ramdomPos = Math.floor(Math.random() * 16);
-     card.style.order = ramdomPos;
-   });
- })();
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 16);
+    card.style.order = randomPos;
+  });
+})();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
@@ -68,13 +69,11 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 
-// modal declaration of variables 
+// modal 
 
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("HowToBtn");
-var span = document.getElementsByClassName("close")[0];
-
-// functions 
+var span = document.getElementsByClassName("close")[0]; 
 
 btn.onclick = function() {
   modal.style.display = "block";
