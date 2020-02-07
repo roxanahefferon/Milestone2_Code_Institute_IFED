@@ -133,16 +133,44 @@ body {
 
 /* sorting hat */
 
-#typeWBtn {
-    background-color: #2d004d;
-    color: #fff;
-    border-radius: 0.25rem;
+#quizButton {
+    background-color: #000;
+    border: none;
+}
+
+.title, .subtitle {
+    font-family: 'Fontdiner Swanky', cursive, sans-serif;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.g {
+    color: #9c1203;
+}
+
+.h {
+    color: #e3a000;
+}
+
+.r {
+    color: #00165e;
+}
+
+.s {
+    color: #033807;
 }
 
 /* quotes generator */
 
 #quotes-container {
-    background-image: url('https://i.imgur.com/Q51i0sM.png');
+  background-image: url('https://i.imgur.com/Q51i0sM.png');
+  background-color: #000; 
+  height: 100vh; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
 }
 
 #quote-center {
@@ -167,18 +195,25 @@ body {
   font-size: 20px;
 }
 
+#display-container {
+    padding-left: 0;
+}
+
 .quotesBox {
-background-color: green;
+background-color: #e3a000;
+font-size: 2.5rem;
+color: #000;
+opacity: 0.75;
 margin: 50px;
 border-radius: 0.25rem;
 }
-
 
 btn:focus {
   outline:transparent;
 }
 
 .quoteBtn {
+  margin-top: 50px;
   top: 20px;
   color: #fff;
   border: none;
@@ -220,67 +255,4 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 #board {
     max-width: 70%;
-}
-}
-
-
-/* quiz */
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-.quiz-wrapper {
-    display: flex;
-    background-color: red;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 2px;
-    width: 100vw;
-    height: 75vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.quiz-btn {
-    background-color: #00165e;
-    color: #fff;
-}
-
-.quiz-container {
-    width: 800px;
-    max-width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
-}
-
-.quiz-btn {
-    margin: 20px 0;
-    border-radius: 5px;
-}
-
-.quiz-question {
-    color: #000;
-}
-
-.quiz-start-btn, .quiz-next-btn {
-background-color: #e3a000;
-font-weight: bold;
-padding: 5px 10px;
-margin: 5px;
-}
-
-.quiz-controls {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 5px 10px;
-}
-
-.hide {
-display: none;
 }
